@@ -1,9 +1,9 @@
-package modelo;
+package campoMinado.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import excecao.ExplosaoException;
+import campoMinado.excecao.ExplosaoException;
 
 public class Campo {
 
@@ -68,6 +68,9 @@ public class Campo {
 
 	void minar() {
 		minado = true;
+	}
+	boolean isMinado() {
+		return minado;
 	}
 
 	public boolean isMarcar() {

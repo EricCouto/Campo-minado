@@ -1,4 +1,4 @@
-package excecao;
+package campoMinado.excecao;
 
 public class ExplosaoException extends RuntimeException {
 
