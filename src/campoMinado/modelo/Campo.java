@@ -69,12 +69,17 @@ public class Campo {
 	void minar() {
 		minado = true;
 	}
+
 	boolean isMinado() {
 		return minado;
 	}
 
 	public boolean isMarcar() {
 		return marcado;
+	}
+
+	public void setAberto(boolean aberto) {
+		this.aberto = aberto;
 	}
 
 	public boolean isAberto() {
@@ -111,15 +116,15 @@ public class Campo {
 	}
 
 	public String toString() {
-		if(marcado) {
+		if (marcado) {
 			return "X";
-		}else if (aberto && minado) {
+		} else if (aberto && minado) {
 			return "*";
-		}else if (aberto && minasNaVizinhaca() > 0) {
-			return Long.toString(minasNaVizinhaca());			
-		}else if (aberto) {
+		} else if (aberto && minasNaVizinhaca() > 0) {
+			return Long.toString(minasNaVizinhaca());
+		} else if (aberto) {
 			return " ";
-		}else 
+		} else
 			return "?";
 	}
 
